@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget Tracker</title>
+  <link rel="stylesheet" href="budget.css">
+</head>
+<body>
+  <div class="container">
+    <div id="budget-setup">
+      <h2>Set Your Budget</h2>
+      <input type="number" id="budget-input" placeholder="Enter budget(₱)">
+      <button onclick="setBudget()">Start</button>
+    </div>
+
+    <div id="tracker" style="display: none;">
+      <h2>My Budget</h2>
+      <div class="balance">
+        <h3>Remaining Balance</h3>
+        <h1 id="balance">₱0.00</h1>
+      </div>
+
+    <div class="add-budget">
+            <h3>Add More Budget</h3>
+            <input type="number" id="add-budget-input" placeholder="₱0.00">
+            <button onclick="addMoreBudget()">Add</button>
+   </div>
+  
+
+      <h3>Add Transaction or Plan</h3>
+      <form id="form">
+        <input type="text" id="desc" placeholder="" required>
+        <input type="number" id="amount" placeholder="Amount (₱)" required>
+        <button type="submit">Add</button>
+      </form>
+
+      <ul id="transaction-list" class="list"></ul>
+    </div>
+    
+    <script src="budget.js"></script>
+  </div>
+</body>
+</html>
